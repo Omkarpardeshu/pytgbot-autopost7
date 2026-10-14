@@ -1,4 +1,18 @@
 """Telegram bot which queues photos and posts them at specified time.
+from flask import Flask
+import threading
+import os
+
+app = Flask('')
+
+@app.route('/')
+def home():
+    return "Bot is Alive"
+
+def run():
+    app.run(host='0.0.0.0', port=int(os.environ.get('PORT', 8080)))
+
+threading.Thread(target=run).start()
 
 Posts are added to the json database and posted to the channel specified.
 """
