@@ -7,3 +7,4 @@ simplejson==3.19.2
 tinydb==4.8.0
 cython==3.0.9
 python-dotenv==1.0.1
+flask
